@@ -1,0 +1,18 @@
+### Using python-3.4.3 and Django-1.8
+###     pythonbrew switch 3.4.3
+
+# 1. Create project - mysite
+django-admin startproject mysite
+## python manage.py <command> [options]
+python manage.py migrate
+python manage.py runserver
+
+# 2. View
+
+
+'''
+# A. modules
+1. "from django.conf.urls import include" which allows you to include a full Python import path to another URLconf module.
+2. "from django.conf.urls import url" which uses a regular expression to pattern match the URL in your browser to a module in your Django project.
+3. "from django.contrib import admin" This function is called by the include function to load the URLs for the Django admin site.
+'''

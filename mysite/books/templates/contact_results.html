@@ -1,0 +1,15 @@
+<html>
+  <head>
+      <title>Contact results</title>
+  </head>
+  <body>
+    <h1>Submitted Successfully!</h1>
+  {% if contact_info %}
+    <h2>Overview your submission:</h2>
+    Subject: {{ contact_info.subject}}<br>
+    E-mail: {{ contact_info.email}}<br>
+    Message: {{ contact_info.message}}<br>
+
+  {% endif %}
+  </body>
+</html>
