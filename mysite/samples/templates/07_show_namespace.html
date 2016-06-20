@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chapter 7. show namespace [Not success]</title>
+</head>
+<body>
+    <a href="{% url 'reviews-year-archive' 2012 %}">2012 Archive</a>
+    {# Or with the year in a template context variable: #}
+    <ul>
+    {% for yearvar in year_list %}
+    <li><a href="{% url 'reviews-year-archive' yearvar %}">{{ yearvar }} Archive</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

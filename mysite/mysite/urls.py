@@ -14,11 +14,16 @@ urlpatterns = [
     url(r'^$', views.my_homepage_view),
 
     # url(r'^search/$', bkviews.search),
+    # include other url_patterns
     url(r'^search/', include(books_patterns)),
+
     url(r'^contact/$', views.contact),
-    url(r'^reviews/$', views.page),
-    url(r'^reviews/page(?P<num>[0-9]+)/$', views.page),
-    url(r'^samples/', include('samples.urls'))
+
+    # include other app's urls.py
+    url(r'^samples/', include('samples.urls')),
+
+    url(r'^namespace/', include('samples.urls', namespace='author-reviews', app_name='samples')),
+
 ]
 
 if settings.DEBUG:
